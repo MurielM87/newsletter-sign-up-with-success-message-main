@@ -1,0 +1,16 @@
+#illustration_desktop {
+    display: block;
+    margin: 15px;
+    height: 430px;
+    @media screen and (max-width: map-get($breakpoints, mobile))  {
+        display: none;
+    }
+}
+
+#illustration_mobile {
+    display: none;
+
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        display: block;
+    }
+}

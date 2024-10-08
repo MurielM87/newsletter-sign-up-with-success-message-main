@@ -1,0 +1,80 @@
+#form {
+  @include flex-center-row;
+  background-color: $white;
+  width: 50%;
+  height: 460px;
+  margin: 50px auto;
+  border-radius: 20px;
+  @media screen and (max-width: map-get($breakpoints, mobile))  {
+    width: 100%;
+    flex-direction: column-reverse;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  #form_card {
+    padding: 25px 30px 20px 15px;
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        font-size: 30px;
+        text-align: left;
+      }
+    }
+
+    #presentation_text {
+      margin-bottom: 25px;
+      line-height: 20px;
+    }
+
+    div {
+      line-height: 25px;
+      display: flex;
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        align-items: flex-start;
+      }
+
+      .icon_list {
+        margin-right: 10px;
+      }
+    }
+
+    #form_email {
+        @include flex-start-column;
+
+        label {
+            margin: 20px 0 0 0;
+            font-weight: 800;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            @media screen and (max-width: map-get($breakpoints, mobile)) {
+              width: 100%;
+            }
+        }
+    }
+    
+    #subscribe {
+        color: $white;
+        background-color: $dark_slate_grey;
+        padding: 10px 65px;
+        border-radius: 10px;
+
+        &:hover {
+            background: linear-gradient(45deg, $tomato, hsl(360, 72%, 65%));
+            cursor: pointer;
+            box-shadow: -3px 4px 26px 5px rgba(248, 146, 87, 0.32);
+        }
+
+        @media screen and (max-width: map-get($breakpoints, mobile)) {
+          padding: 10px 20px;
+          margin: auto;
+        }
+    }
+  }
+}

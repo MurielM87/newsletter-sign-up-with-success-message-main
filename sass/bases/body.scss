@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: $charcoal_grey;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    background-color: $white;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+    .container {
+      width: 1460px;
+
+      @media screen and (max-width: map-get($breakpoints, mobile)) {
+        width: 100%;
+      }
+    }
+  }
+}

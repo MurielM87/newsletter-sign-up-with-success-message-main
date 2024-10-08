@@ -1,0 +1,55 @@
+#message {
+  display: none;
+  background-color: $white;
+  width: 30%;
+  margin: 50px auto;
+  padding: 20px 50px 30px;
+  border-radius: 20px;
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding-left: 30px;
+  }
+
+  #icon_success {
+    width: 40px;
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      margin-top: 75px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  #confirmation {
+    line-height: 25px;
+    margin-bottom: 25px;
+
+    span {
+      font-weight: 800;
+    }
+  }
+
+  #dismiss {
+    color: $white;
+    background-color: $dark_slate_grey;
+    padding: 10px 100px;
+    border-radius: 10px;
+
+    &:hover {
+        background: linear-gradient(45deg, $tomato, hsl(360, 72%, 65%));
+        cursor: pointer;
+        box-shadow: -3px 4px 26px 5px rgba(248, 146, 87, 0.32);
+    }
+
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      padding: 10px 55px;
+      margin: auto;
+      margin-top: 100px;
+    }
+  }
+}
